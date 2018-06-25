@@ -1,0 +1,18 @@
+#sidebar {
+    height:100vh;
+    border-right: 1px lightblue solid;
+}
+
+#btnbar {
+    height: 25vh;
+    padding-left:25px;
+    border-bottom: 1px lightblue solid;
+}
+
+#displayDiv {
+    padding-left:25px;
+}
+
+#parentRow {
+    margin-top: 25px;
+}
