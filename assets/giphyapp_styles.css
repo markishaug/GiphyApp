@@ -4,15 +4,19 @@
 }
 
 #btnbar {
-    height: 25vh;
+    /* min-height: 35vh; */
     padding-left:25px;
-    border-bottom: 1px lightblue solid;
+    padding-bottom:35px;
 }
 
 #displayDiv {
-    padding-left:25px;
+    padding-left:30px;
 }
 
 #parentRow {
     margin-top: 25px;
+}
+
+.btn-primary {
+    margin:5px;
 }
