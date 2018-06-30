@@ -56,19 +56,18 @@ function renderButtons() {
 
 
 
-// function newButton (){
-//     var btnClicked = $(this).attr("data-name");
-
-
-//     $("#addTopicBtn").on("click", function(event) {
-//         event.preventDefault();
-//         var newTopic = $("#addTopic").val().trim();
-    
-//         topics.push(newTopic);
-    
-//         renderButtons();
-//     });
-// }
+function newButton (event){
+    event.preventDefault();
+    // var btnClicked = $(this).attr("data-name");
+        var newTopic = $("#addTopic").val().trim();
+        if (newTopic === "") {
+            return false;
+        } else {
+            topics.push(newTopic);
+            $("#addTopic").val("");
+            renderButtons();
+    };
+}
 
 
 function changeState() { // toggle the data-state, switiching from still and animated URL
@@ -86,7 +85,7 @@ function changeState() { // toggle the data-state, switiching from still and ani
 
 $(document).on("click", ".gifbtn", displayGifs);
 $(document).on("click", ".gifDown", changeState);
-// $(document).on("click", "#addTopicBtn", newButton);
+$(document).on("click", "#addTopicBtn", newButton);
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
